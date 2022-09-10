@@ -38,11 +38,11 @@ let getbase=()=>{
 
 
 //Player Openers (diff. func. coding intentionally)
-let openplyr=()=> { window.open('plyr.html?id='+base)}
-let openfluid=()=> { window.open('fluid.html?id='+base)}
-let openafterglow=()=> { window.open('afterglow.html?id='+base)}
-let openmediaelements=()=> { window.open('mediaelements.html?id='+base)}
-let openvlitejs=()=> { window.open('vlitejs.html?id='+base)}
+let openplyr=()=> { window.open('https://driveplyr.sh20raj.repl.co/plyr.html?id='+base)}
+let openfluid=()=> { window.open('https://driveplyr.sh20raj.repl.co/fluid.html?id='+base)}
+let openafterglow=()=> { window.open('https://driveplyr.sh20raj.repl.co/afterglow.html?id='+base)}
+let openmediaelements=()=> { window.open('https://driveplyr.sh20raj.repl.co/mediaelements.html?id='+base)}
+let openvlitejs=()=> { window.open('https://driveplyr.sh20raj.repl.co/vlitejs.html?id='+base)}
 
 
 let pmsg = 'Copy Embed Code' ;
@@ -50,7 +50,7 @@ let pmsg = 'Copy Embed Code' ;
 let embedplyr=()=> {
   prompt(pmsg,`<iframe width="560" height="315" 
 scrolling="no"
-src="plyr.html?id=${base}" 
+src="https://driveplyr.sh20raj.repl.co/plyr.html?id=${base}" 
 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
 gyroscope; picture-in-picture" allowfullscreen>
 </iframe>`)
@@ -58,7 +58,7 @@ gyroscope; picture-in-picture" allowfullscreen>
 let embedfluid=()=> {
   prompt(pmsg,`<iframe width="560" height="315" 
 scrolling="no"
-src="fluid.html?id=${base}" 
+src="https://driveplyr.sh20raj.repl.co/fluid.html?id=${base}" 
 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
 gyroscope; picture-in-picture" allowfullscreen>
 </iframe>`)
@@ -66,7 +66,7 @@ gyroscope; picture-in-picture" allowfullscreen>
 let embedafterglow=()=> {
   prompt(pmsg,`<iframe width="560" height="315" 
 scrolling="no"
-src="afterglow.html?id=${base}" 
+src="https://driveplyr.sh20raj.repl.co/afterglow.html?id=${base}" 
 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
 gyroscope; picture-in-picture" allowfullscreen>
 </iframe>`)
@@ -74,7 +74,7 @@ gyroscope; picture-in-picture" allowfullscreen>
 let embedmediaelements=()=> {
   prompt(pmsg,`<iframe width="560" height="315" 
 scrolling="no"
-src="mediaelements.html?id=${base}" 
+src="https://driveplyr.sh20raj.repl.co/mediaelements.html?id=${base}" 
 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
 gyroscope; picture-in-picture" allowfullscreen>
 </iframe>`)
@@ -82,7 +82,7 @@ gyroscope; picture-in-picture" allowfullscreen>
 let embedvlitejs=()=> {
   prompt(pmsg,`<iframe width="560" height="315" 
 scrolling="no"
-src="vlitejs.html?id=${base}" 
+src="https://driveplyr.sh20raj.repl.co/vlitejs.html?id=${base}" 
 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
 gyroscope; picture-in-picture" allowfullscreen>
 </iframe>`);
@@ -90,12 +90,11 @@ gyroscope; picture-in-picture" allowfullscreen>
 
 
 
-
 let iframe=()=> {
-  s('afterglow').src= 'afterglow.html?id='+base;
-  s('fluid').src='fluid.html?id='+base;
-  s('plyr').src='plyr.html?id='+base;
-  s('vlitejs').src='vlitejs.html?id='+base;
-  s('mediaelements').src='mediaelements.html?id='+base;
+  s('afterglow').src= 'https://driveplyr.sh20raj.repl.co/afterglow.html?id='+base;
+  s('fluid').src='https://driveplyr.sh20raj.repl.co/fluid.html?id='+base;
+  s('plyr').src='https://driveplyr.sh20raj.repl.co/plyr.html?id='+base;
+  s('vlitejs').src='https://driveplyr.sh20raj.repl.co/vlitejs.html?id='+base;
+  s('mediaelements').src='https://driveplyr.sh20raj.repl.co/mediaelements.html?id='+base;
   
 }

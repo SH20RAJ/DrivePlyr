@@ -38,3 +38,15 @@
 }
     );
 </script>
+<script>
+  let apikey = 'AIzaSyD739-eb6NzS_KbVJq1K8ZAxnrMfkIqPyw';
+  function getparam(a,e){return e||(e=window.location.href),new URL(e).searchParams.get(a)}
+
+  let video = document.getElementById('video-id');
+  if(getparam('id')){
+    let json = JSON.parse(atob(getparam('id'))) ;
+    let driveid = json.id;
+    video.src = `https://www.googleapis.com/drive/v3/files/${driveid }?alt=media&key=${apikey}`;
+    video.poster = 'https://lh3.googleusercontent.com/d/'+driveid;
+  }
+</script>

@@ -3,13 +3,9 @@
 
 <!--Add a Simple HTML5 Video tag-->
 <div id="container">
-  <video controls data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" class="vid1">
+  <video controls poster="https://bit.ly/bbsampleposter" id="vid1">
     <!-- Video files -->
     <source src="https://rebrand.ly/sample-video" type="video/mp4" size="576" />
-
-    <!-- Caption files -->
-    <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default />
-    <track kind="captions" label="Français" srclang="fr" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt" />
 
   </video>
 </div>
@@ -37,7 +33,7 @@
     'fullscreen' // Toggle fullscreen
 ];
 
-  const player = new Plyr('.vid1',{controls});
+  const player = new Plyr('#vid1',{controls});
 </script>
 
 <style>
@@ -47,3 +43,16 @@
 }
 
 </style>
+
+<script>
+  let apikey = 'AIzaSyD739-eb6NzS_KbVJq1K8ZAxnrMfkIqPyw';
+  function getparam(a,e){return e||(e=window.location.href),new URL(e).searchParams.get(a)}
+
+  let video = document.getElementById('vid1');
+  if(getparam('id')){
+    let json = JSON.parse(atob(getparam('id'))) ;
+    let driveid = json.id;
+    video.src = `https://www.googleapis.com/drive/v3/files/${driveid }?alt=media&key=${apikey}`;
+    video.poster = 'https://lh3.googleusercontent.com/d/'+driveid;
+  }
+</script>

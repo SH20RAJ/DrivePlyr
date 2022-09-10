@@ -1,3 +1,4 @@
+
 function getparam(a,e){return e||(e=window.location.href),new URL(e).searchParams.get(a)}
 let s=a=>document.getElementById(a);
 
@@ -10,11 +11,24 @@ let get=()=>{
 }
 let getbase=()=>{
     let ply = [];
-    ply.videourl = `https://www.googleapis.com/drive/v3/files/${getIdFromUrl(s('videourl').value) }?alt=media&key=${apikey}`,
-    ply.posterurl = s('posterurl').value,//https://lh3.googleusercontent.com/d/1ibx_QtJdEBVV3IKaO0WQbQ7CtMnDwpZW
+  /*
+    ply.videourl = `https://www.googleapis.com/drive/v3/files/${getIdFromUrl(s('videourl').value) }?alt=media&key=${apikey}`;
+
+  
+  
+  let poster = "";
+      if(s('posterurl').value){
+       poster = s('posterurl').value ;}
+  else {
+    poster = 'https://lh3.googleusercontent.com/d/'+getIdFromUrl(s('videourl').value);
+  }
+    ply.posterurl = poster ; */
+  
+    ply.id =  getIdFromUrl(s('videourl').value);
       
-    ply.videotitle = s('videotitle').value;
+   // ply.videotitle = s('videotitle').value;
     console.log(ply);
+  
     var arr = JSON.stringify(Object.assign({}, ply))
     console.log(btoa(arr));
     window.base =btoa(arr);
@@ -71,23 +85,17 @@ scrolling="no"
 src="vlitejs.html?id=${base}" 
 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
 gyroscope; picture-in-picture" allowfullscreen>
-</iframe>`)
+</iframe>`);
 }
 
 
 
-
-let embed=()=>{
-    ply = getbase();
-    let link = location.href+'?play='+ply;
-    s('code').innerText='<iframe cite="'+location.href+'" src="'+link+'" width="853" height="480" title="SopPlayer video player - '+s('vidtitle').value+'" frameborder="0" scrolling="no" style="overflow: hidden" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-}
 
 let iframe=()=> {
-  s.('afterglow').src='afterglow.html?id='+base;
-  s.('fluid').src='fluid.html?id='+base;
-  s.('plyr').src='plyr.html?id='+base;
-  s.('vlitejs').src='vlitejs.html?id='+base;
-  s.('mediaelements').src='mediaelements.html?id='+base;
+  s('afterglow').src= 'afterglow.html?id='+base;
+  s('fluid').src='fluid.html?id='+base;
+  s('plyr').src='plyr.html?id='+base;
+  s('vlitejs').src='vlitejs.html?id='+base;
+  s('mediaelements').src='mediaelements.html?id='+base;
   
 }

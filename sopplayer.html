@@ -1,13 +1,18 @@
 
-<video class="afterglow" id="myvideo" width="1280" height="720" data-skin="dark" poster="https://sh20raj.github.io/Sopplayer/sample.png">
-        <source type="video/mp4" src="https://bit.ly/bbsamplevideo" />
+<link href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/sopplayer.min.css" rel="stylesheet" />
+  <!--Here is the Css Library-->
+
+
+    <video id="my-video" class="sopplayer" controls preload="auto" data-setup="{}" width= "100%">
+      <!--Use class="sopplayer" and data-setup="{}" -->
+      <source src="https://bit.ly/bbsamlevideo" type="video/mp4" />
     </video>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/afterglowplayer@1.x"></script>
+   <script src="https://rebrand.ly/SopPlayerJS"></script>
+    <!--Here is the JavaScript Library-->
+
 <script>
-  var apikey = ['AIzaSyCt3DULzE2trDJhfFUosWZT-3GEObbMqVU', 'AIzaSyCsbx8BSyLwkw6XX6Lg5OF1U0HNtI9VmCY', 'AIzaSyBLMJAT6oqTZxAMsCsMjXzoo4lkJL4MmfM', 'AIzaSyCIY6fomcJxOt0XQ_naa1rzfd5wlOMGKDY'][Math.floor(Math.random() * 4)];
- console.log(apikey);
-   //apikey = 'AIzaSyD739-eb6NzS_KbVJq1K8ZAxnrMfkIqPyw';
+  let apikey = 'AIzaSyD739-eb6NzS_KbVJq1K8ZAxnrMfkIqPyw';
   function getparam(a,e){return e||(e=window.location.href),new URL(e).searchParams.get(a)}
 
   let video = document.getElementById('myvideo');

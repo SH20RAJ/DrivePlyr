@@ -86,7 +86,9 @@
     }
   </style>
 <script>
-  let apikey = 'AIzaSyD739-eb6NzS_KbVJq1K8ZAxnrMfkIqPyw';
+  var apikey = ['AIzaSyCt3DULzE2trDJhfFUosWZT-3GEObbMqVU', 'AIzaSyCsbx8BSyLwkw6XX6Lg5OF1U0HNtI9VmCY', 'AIzaSyBLMJAT6oqTZxAMsCsMjXzoo4lkJL4MmfM', 'AIzaSyCIY6fomcJxOt0XQ_naa1rzfd5wlOMGKDY'][Math.floor(Math.random() * 4)];
+ console.log(apikey);
+   //apikey = 'AIzaSyD739-eb6NzS_KbVJq1K8ZAxnrMfkIqPyw';
   function getparam(a,e){return e||(e=window.location.href),new URL(e).searchParams.get(a)}
 
   let video = document.getElementById('player1');

@@ -38,6 +38,7 @@ let getbase=()=>{
 
 
 //Player Openers (diff. func. coding intentionally)
+let opensp=()=> { window.open('https://driveplyr.sh20raj.repl.co/sopplayer.html?id='+base)}
 let openplyr=()=> { window.open('https://driveplyr.sh20raj.repl.co/plyr.html?id='+base)}
 let openfluid=()=> { window.open('https://driveplyr.sh20raj.repl.co/fluid.html?id='+base)}
 let openafterglow=()=> { window.open('https://driveplyr.sh20raj.repl.co/afterglow.html?id='+base)}
@@ -47,6 +48,14 @@ let openvlitejs=()=> { window.open('https://driveplyr.sh20raj.repl.co/vlitejs.ht
 
 let pmsg = 'Copy Embed Code' ;
 //Player Embedders
+let embedsp=()=> {
+  prompt(pmsg,`<iframe width="560" height="315" 
+scrolling="no"
+src="https://driveplyr.sh20raj.repl.co/sopplayer.html?id=${base}" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+gyroscope; picture-in-picture" allowfullscreen>
+</iframe>`)
+}
 let embedplyr=()=> {
   prompt(pmsg,`<iframe width="560" height="315" 
 scrolling="no"
@@ -94,7 +103,10 @@ let iframe=()=> {
   s('afterglow').src= 'https://driveplyr.sh20raj.repl.co/afterglow.html?id='+base;
   s('fluid').src='https://driveplyr.sh20raj.repl.co/fluid.html?id='+base;
   s('plyr').src='https://driveplyr.sh20raj.repl.co/plyr.html?id='+base;
+
   s('vlitejs').src='https://driveplyr.sh20raj.repl.co/vlitejs.html?id='+base;
   s('mediaelements').src='https://driveplyr.sh20raj.repl.co/mediaelements.html?id='+base;
+  
+    s('sopplayer').src='https://driveplyr.sh20raj.repl.co/sopplayer.html?id='+base;
   
 }

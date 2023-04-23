@@ -1,6 +1,8 @@
 
 <link href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/sopplayer.min.css" rel="stylesheet" />
   <!--Here is the Css Library-->
+<link rel="icon" href="drive-logo.png">
+
 <style>
   html, body {
   height: 100%;
@@ -27,15 +29,25 @@
     <!--Here is the JavaScript Library-->
 
 <script>
-  let apikey = 'AIzaSyD739-eb6NzS_KbVJq1K8ZAxnrMfkIqPyw';
+ // let apikey = 'AIzaSyD739-eb6NzS_KbVJq1K8ZAxnrMfkIqPyw';
+    var apikey = ['AIzaSyCt3DULzE2trDJhfFUosWZT-3GEObbMqVU', 'AIzaSyCsbx8BSyLwkw6XX6Lg5OF1U0HNtI9VmCY', 'AIzaSyBLMJAT6oqTZxAMsCsMjXzoo4lkJL4MmfM', 'AIzaSyCIY6fomcJxOt0XQ_naa1rzfd5wlOMGKDY'][Math.floor(Math.random() * 4)];
+ console.log(apikey);
+  
+  let videolink, video, json ;
   function getparam(a,e){return e||(e=window.location.href),new URL(e).searchParams.get(a)}
 
-  let video = document.getElementById('my-video');
+   video = videojs('my-video');
   if(getparam('id')){
-    let json = JSON.parse(atob(getparam('id'))) ;
+     json = JSON.parse(atob(getparam('id'))) ;
+    console.log(json)
     let driveid = json.id;
-    video.src = `https://www.googleapis.com/drive/v3/files/${driveid }?alt=media&key=${apikey}`;
-    video.poster = 'https://lh3.googleusercontent.com/d/'+driveid;
+    videolink = `https://www.googleapis.com/drive/v3/files/${driveid }?alt=media&key=${apikey}`;
+    //video.src(videolink);
+    video.src([
+			{type: "video/mp4", src: videolink},
+			{type: "rtmp/mp4", src: videolink}
+		]);
+    video.poster_ = 'https://lh3.googleusercontent.com/d/'+driveid;
   }
 </script>
 

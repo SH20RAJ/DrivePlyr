@@ -27,17 +27,17 @@ html, body {
   let json, video ;
   function getparam(a,e){return e||(e=window.location.href),new URL(e).searchParams.get(a)}
 
-  video = videojs('my-video')
+  video = document.getElementById('my-video');
   if(getparam('id')){
     json = JSON.parse(atob(getparam('id'))) ;
     let driveid = json.id;
     videolink = `https://www.googleapis.com/drive/v3/files/${driveid }?alt=media&key=${apikey}`;
     //video.src(videolink);
-    video.src([
+    document.getElementById('my-video').src([
 			{type: "video/mp4", src: videolink},
 			{type: "rtmp/mp4", src: videolink}
 		]);
-    video.poster_ = 'https://lh3.googleusercontent.com/d/'+driveid ;
+    document.getElementById('my-video').poster_ = 'https://lh3.googleusercontent.com/d/'+driveid ;
   }
 </script>
 

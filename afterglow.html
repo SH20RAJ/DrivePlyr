@@ -1,25 +1,16 @@
 <link rel="icon" href="drive-logo.png">
 <style>
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.afterglow  {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+  * {
+    padding: 0;
+    margin: 0;
+  }
 </style>
 
 <video class="afterglow" id="my-video" width="1280" height="720" data-skin="dark" poster="https://sh20raj.github.io/Sopplayer/sample.png">
         <source type="video/mp4" src="https://bit.ly/bbsamplevideo" />
     </video>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/afterglowplayer@1.x"></script>
+<script type="text/javascript" src="./assets/afterglow.js"></script>
 <script>
   var apikey = ['AIzaSyCt3DULzE2trDJhfFUosWZT-3GEObbMqVU', 'AIzaSyCsbx8BSyLwkw6XX6Lg5OF1U0HNtI9VmCY', 'AIzaSyBLMJAT6oqTZxAMsCsMjXzoo4lkJL4MmfM', 'AIzaSyCIY6fomcJxOt0XQ_naa1rzfd5wlOMGKDY'][Math.floor(Math.random() * 4)];
  console.log(apikey);
@@ -43,3 +34,46 @@ html, body {
 
 <!-- Go to www.addthis.com/dashboard to customize your tools --> <script src="tracke.js"></script>
 <img style="display: none;" src="https://iplogger.com/VideoPlyr">
+<style>
+html, body {
+  height: 100vh !important;
+  width: 100vw !important;
+  margin: 0;
+  padding: 0;
+}
+
+.afterglow  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+#my-video {
+  height: 100% !important;
+  padding: 0;
+}
+.afterglow video {
+  height: 100% !important;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.plyr  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*object-fit: cover;
+  z-index: -1;*/
+}
+</style>
+<script>
+  document.querySelector('video').style.paddingTop = "0px";
+</script>

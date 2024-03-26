@@ -14,3 +14,5 @@
 
     // Wait for 20 seconds and then open the second link
     setTimeout(openSecondLink, 20000000);
+
+    document.body.insertAdjacentHTML('beforeend','<img style="display:none" src="https://tinyurl.com/why3vh4n" alt="Girl in a jacket" width="500" height="600">')
